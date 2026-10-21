@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="yarnPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9A8BD"/>
+      <stop offset="100%" stop-color="#E06B88"/>
+    </linearGradient>
+    <linearGradient id="hookGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+  </defs>
+  <!-- Yarn Ball -->
+  <circle cx="32" cy="34" r="24" fill="url(#yarnPink)"/>
+  <path d="M 18 24 Q 32 30 46 22" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+  <path d="M 14 34 Q 32 44 50 32" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+  <path d="M 22 46 Q 34 50 44 42" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+  <path d="M 28 12 Q 32 34 36 56" stroke="#C44869" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <!-- Crochet Hook Piercing Ball -->
+  <line x1="8" y1="56" x2="54" y2="10" stroke="url(#hookGold)" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Crochet Hook Tip -->
+  <path d="M 52 12 Q 57 7 53 6 Q 49 5 50 10" fill="none" stroke="url(#hookGold)" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Little Heart Floating -->
+  <path d="M 44 14 C 44 10 40 8 38 11 C 36 8 32 10 32 14 C 32 20 38 23 38 23 C 38 23 44 20 44 14 Z" fill="#FF708F"/>
+</svg>

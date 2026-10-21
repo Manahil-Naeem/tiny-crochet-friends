@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Crochet Friends • Handmade with Love 🧶</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF6F0',
+                        rose: {
+                            50: '#FDF2F5',
+                            100: '#FCE7EC',
+                            200: '#F9CED7',
+                            300: '#F4A6B8',
+                            400: '#EB7B99',
+                            500: '#E05A80',
+                            600: '#CC4168',
+                            700: '#AB2E50',
+                            800: '#8E2843',
+                            900: '#5C1A2B',
+                        },
+                        sage: {
+                            50: '#F3F6F4',
+                            100: '#E4ECE7',
+                            200: '#CBD9CE',
+                            500: '#8CA796',
+                            600: '#6E8B79'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Cozy Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS CDN -->
+
+</head>
+<body class="flex flex-col min-h-screen text-stone-800 antialiased selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- Top Announcement Ribbon -->
+    <div class="bg-gradient-to-r from-rose-100 via-amber-50 to-rose-100 border-b border-rose-200/60 py-2 px-4 text-center text-xs font-semibold text-rose-800 flex items-center justify-center gap-2">
+        <span class="animate-bounce">🧶</span>
+        <span>100% Made-to-Order • Making & dispatch time: <strong>5 to 8 working days</strong> • Free delivery on orders over Rs. 3,000!</span>
+        <span>✨</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-rose-100 shadow-sm transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="brand-logo-frame">
+                    <img src="assets/logo.png" alt="Tiny Crochet Friends Logo" class="brand-logo-img">
+                </div>
+                <div>
+                    <span class="font-heading font-extrabold text-xl text-stone-900 tracking-tight block">Tiny Crochet Friends</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-rose-500 block -mt-0.5">Handmade Studio</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-stone-600">
+                <a href="#home" class="nav-link hover:text-rose-600 transition">Home</a>
+                <a href="#shop" class="nav-link hover:text-rose-600 transition">Shop Catalog</a>
+                <a href="#custom" class="nav-link hover:text-rose-600 transition flex items-center gap-1.5">
+                    <span>Custom Orders</span>
+                    <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-amber-100 text-amber-800 font-bold">Bespoke</span>
+                </a>
+                <a href="#track" class="nav-link hover:text-rose-600 transition">Track Order</a>
+                <a href="#admin" id="nav-admin-btn" class="nav-link text-stone-400 hover:text-stone-700 text-xs transition">Admin Studio 🔒</a>
+            </nav>
+
+            <!-- Actions: Instagram link + Bag button -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <!-- Instagram Official Button -->
+                <a href="https://www.instagram.com/tiny.crochetfriends?stkn=cjZxODZleGNzZTVv" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   title="Follow @tiny.crochetfriends on Instagram" 
+                   class="flex items-center gap-1.5 px-3 py-2 rounded-2xl bg-gradient-to-r from-pink-50 to-rose-50 hover:from-pink-100 hover:to-rose-100 border border-pink-200 text-pink-700 font-bold text-xs transition shadow-sm group">
+                    <svg class="w-4 h-4 fill-current text-pink-600 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span class="hidden sm:inline">Instagram</span>
+                </a>
+
+                <!-- Cart Button -->
+                <button type="button" class="cart-toggle-btn relative flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-800 font-bold text-xs shadow-sm transition group">
+                    <span class="text-base group-hover:rotate-12 transition-transform">🛍️</span>
+                    <span class="hidden sm:inline">My Bag</span>
+                    <span class="cart-count-badge hidden px-2 py-0.5 rounded-full bg-rose-500 text-white text-[11px] font-extrabold">0</span>
+                </button>
+
+                <!-- Mobile Hamburger Button -->
+                <button type="button" id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-stone-600 hover:bg-rose-50 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-rose-100 px-6 py-4 space-y-3 font-semibold text-sm">
+            <a href="#home" class="nav-link block py-2 text-stone-700 hover:text-rose-600">Home</a>
+            <a href="#shop" class="nav-link block py-2 text-stone-700 hover:text-rose-600">Shop Catalog</a>
+            <a href="#custom" class="nav-link block py-2 text-stone-700 hover:text-rose-600">✨ Request Custom Order</a>
+            <a href="#track" class="nav-link block py-2 text-stone-700 hover:text-rose-600">📦 Track Order</a>
+            <a href="https://www.instagram.com/tiny.crochetfriends?stkn=cjZxODZleGNzZTVv" target="_blank" class="block py-2 text-pink-600 font-bold flex items-center gap-2">
+                <span>📸</span> Follow @tiny.crochetfriends
+            </a>
+            <a href="#admin" class="nav-link block py-2 text-stone-500 hover:text-stone-800 text-xs">🔒 Admin Studio</a>
+        </div>
+    </header>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="flex-1">
+
+        <!-- ======================================================== -->
+        <!-- VIEW 1: HOME PAGE -->
+        <!-- ======================================================== -->
+        <section id="view-home" class="animate-fade-in">
+            <!-- Hero Section -->
+            <div class="relative overflow-hidden py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-rose-50/70 via-cream to-transparent">
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-rose-800 font-bold text-xs tracking-wide">
+                            <span>✨</span> 100% Handcrafted • Zero Mass Production
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]">
+                            Handmade with <span class="text-rose-600 underline decoration-rose-300 decoration-wavy decoration-2">Love</span>, One Loop at a Time.
+                        </h1>
+                        <p class="text-stone-600 text-base sm:text-lg max-w-xl leading-relaxed">
+                            Welcome to <strong>Tiny Crochet Friends</strong>! Every single plushie, bag, and keychain is crocheted stitch-by-stitch after your order. Pick your favorite yarn colors with our <strong>5 to 8 working days</strong> making timeline.
+                        </p>
+                        <div class="flex flex-wrap gap-3.5 justify-center md:justify-start pt-2">
+                            <a href="#shop" class="px-7 py-3.5 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-sm shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5">
+                                Explore Ready Designs 🌸
+                            </a>
+                            <a href="#custom" class="px-6 py-3.5 rounded-2xl bg-white hover:bg-rose-50 border border-rose-200 text-rose-800 font-bold text-sm shadow-sm transition transform hover:-translate-y-0.5">
+                                Request Custom Idea 💡
+                            </a>
+                            <a href="https://www.instagram.com/tiny.crochetfriends?stkn=cjZxODZleGNzZTVv" target="_blank" class="px-5 py-3.5 rounded-2xl bg-pink-50 hover:bg-pink-100 border border-pink-200 text-pink-700 font-bold text-sm transition flex items-center gap-2">
+                                <span>📸</span> @tiny.crochetfriends
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Collage -->
+                    <div class="relative flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div class="absolute -top-6 -left-6 w-72 h-72 bg-rose-200/40 rounded-full blur-2xl -z-10"></div>
+                            <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-amber-200/30 rounded-full blur-2xl -z-10"></div>
+
+                            <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl stitch-border-pink p-3 bg-white text-center space-y-4">
+                                <div class="w-full h-72 rounded-2xl bg-gradient-to-tr from-rose-100 via-pink-50 to-amber-50 flex flex-col items-center justify-center p-6 text-stone-700">
+                                    <div class="w-20 h-20 rounded-2xl bg-white p-2 shadow-md border-2 border-rose-200/70 mb-3 flex items-center justify-center">
+                                        <img src="assets/logo.png" alt="Tiny Crochet Friends Logo" class="w-full h-full object-contain rounded-xl">
+                                    </div>
+                                    <h3 class="font-heading font-extrabold text-xl text-stone-900">Tiny Crochet Friends</h3>
+                                    <p class="text-xs text-rose-700 font-semibold mt-1">Made-to-Order with Pure Love</p>
+                                    <div class="mt-4 px-4 py-2 rounded-xl bg-white/90 border border-rose-200 text-xs font-bold text-stone-800 shadow-sm">
+                                        ⏱️ Standard Lead Time: 5 to 8 working days
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Props / Handmade Promises -->
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-5 rounded-2xl bg-white border border-rose-100 shadow-sm">
+                        <div class="w-12 h-12 mx-auto rounded-2xl bg-rose-50 flex items-center justify-center text-2xl mb-3">⏱️</div>
+                        <h4 class="font-bold text-stone-800 text-sm">5 to 8 Working Days</h4>
+                        <p class="text-stone-500 text-xs mt-1">Carefully handcrafted stitch-by-stitch for you.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white border border-rose-100 shadow-sm">
+                        <div class="w-12 h-12 mx-auto rounded-2xl bg-rose-50 flex items-center justify-center text-2xl mb-3">🎨</div>
+                        <h4 class="font-bold text-stone-800 text-sm">Pick Your Colors</h4>
+                        <p class="text-stone-500 text-xs mt-1">Custom yarn palette selections on all items.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white border border-rose-100 shadow-sm">
+                        <div class="w-12 h-12 mx-auto rounded-2xl bg-rose-50 flex items-center justify-center text-2xl mb-3">🌿</div>
+                        <h4 class="font-bold text-stone-800 text-sm">Milk Cotton Yarn</h4>
+                        <p class="text-stone-500 text-xs mt-1">Soft, skin-safe, premium milk cotton fibers.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white border border-rose-100 shadow-sm">
+                        <div class="w-12 h-12 mx-auto rounded-2xl bg-rose-50 flex items-center justify-center text-2xl mb-3">🎀</div>
+                        <h4 class="font-bold text-stone-800 text-sm">Cute Packaging</h4>
+                        <p class="text-stone-500 text-xs mt-1">Gift-ready ribbons, thank you cards, and stickers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Collection -->
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div class="flex items-end justify-between mb-8">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Community Favorites</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-1">Cozy Creations You'll Adore</h2>
+                    </div>
+                    <a href="#shop" class="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center gap-1 transition">
+                        View All Items →
+                    </a>
+                </div>
+
+                <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Custom Order Banner -->
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="bg-gradient-to-r from-rose-200/70 via-rose-100 to-amber-100/60 rounded-3xl p-8 sm:p-12 border border-rose-200/80 shadow-md relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 stitch-border">
+                    <div class="max-w-xl space-y-3 text-center md:text-left">
+                        <span class="px-3 py-1 rounded-full bg-white text-rose-700 font-bold text-xs uppercase tracking-wider">Custom Crochet Service</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Have a dream crochet friend in mind?</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Upload a photo from Pinterest or Instagram! Tell us the colors and details you want, and Tiny Crochet Friends will bring it to life in 5 to 8 working days.
+                        </p>
+                    </div>
+                    <a href="#custom" class="px-7 py-3.5 rounded-2xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition whitespace-nowrap">
+                        Upload Your Photo & Request ✨
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- VIEW 2: SHOP / CATALOG PAGE -->
+        <!-- ======================================================== -->
+        <section id="view-shop" class="hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fade-in">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-rose-100">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-stone-900">Shop Handmade Catalog</h2>
+                    <p class="text-xs sm:text-sm text-stone-500 mt-1">Select any item to preview color swatches and pick your favorite yarn tones.</p>
+                </div>
+
+                <!-- Search Input -->
+                <div class="relative w-full md:w-72">
+                    <input type="text" 
+                           id="shop-search-input" 
+                           placeholder="Search creations..." 
+                           class="w-full pl-9 pr-4 py-2.5 rounded-2xl border border-stone-200 bg-white text-xs focus:outline-none focus:ring-2 focus:ring-rose-400">
+                    <span class="absolute left-3 top-2.5 text-stone-400 text-sm">🔍</span>
+                </div>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div id="category-filter-pills" class="flex items-center gap-2 overflow-x-auto py-5 no-scrollbar">
+                <!-- Populated dynamically -->
+            </div>
+
+            <!-- Made-to-order notice banner -->
+            <div class="mb-6 p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 flex items-center gap-3 text-xs text-amber-900">
+                <span class="text-xl flex-shrink-0">⏱️</span>
+                <p>
+                    <strong>100% Made-to-Order:</strong> Everything is crocheted specifically for you. Standard making and dispatch turnaround is <strong>5 to 8 working days</strong>. Pick your preferred yarn color swatches on any item!
+                </p>
+            </div>
+
+            <!-- Catalog Grid -->
+            <div id="shop-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Populated dynamically -->
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- VIEW 3: CUSTOM ORDER PAGE -->
+        <!-- ======================================================== -->
+        <section id="view-custom" class="hidden max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <span class="px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider">Bespoke Studio</span>
+                <h2 class="text-3xl font-extrabold text-stone-900">Request a Custom Crochet Creation</h2>
+                <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                    Saw a design on Instagram/Pinterest or need a personalized gift? Share an inspiration photo and instructions. We hand-craft custom items in <strong>5 to 8 working days</strong>!
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-rose-100 shadow-xl stitch-border-pink">
+                <form id="custom-order-form" class="space-y-6">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">Your Full Name *</label>
+                            <input type="text" name="customer_name" required placeholder="e.g. Fatima Ali" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs focus:ring-2 focus:ring-rose-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">WhatsApp / Phone Number *</label>
+                            <input type="tel" name="customer_phone" required placeholder="e.g. 0300 1234567" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs focus:ring-2 focus:ring-rose-400">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">Email Address *</label>
+                            <input type="email" name="customer_email" required placeholder="tiny.crochetfriendsz@gmail.com" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs focus:ring-2 focus:ring-rose-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">City *</label>
+                            <input type="text" name="city" required placeholder="Karachi / Lahore / Islamabad..." class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs focus:ring-2 focus:ring-rose-400">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1.5">Delivery Shipping Address *</label>
+                        <input type="text" name="shipping_address" required placeholder="House #, Street, Area, Landmark" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs focus:ring-2 focus:ring-rose-400">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">Item Category *</label>
+                            <select name="item_category" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs bg-white focus:ring-2 focus:ring-rose-400">
+                                <option value="Plushie">🧸 Amigurumi / Plushie</option>
+                                <option value="Keychain & Charm">✨ Keychain / Tiny Charm</option>
+                                <option value="Bag & Tote">👜 Bag / Granny Square Tote</option>
+                                <option value="Wearable">👒 Beanie, Hat or Cardigan</option>
+                                <option value="Bouquet & Decor">🌷 Flower Bouquet or Decor</option>
+                                <option value="Other">🌟 Other Custom Idea</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">Postal Code (Optional)</label>
+                            <input type="text" name="postal_code" placeholder="75500" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs focus:ring-2 focus:ring-rose-400">
+                        </div>
+                    </div>
+
+                    <!-- Inspiration Photo Upload -->
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1.5">Inspiration Photo / Reference </label>
+                        
+                        <div id="custom-dropzone" class="border-2 border-dashed border-rose-200 hover:border-rose-400 bg-rose-50/40 hover:bg-rose-50/80 rounded-2xl p-6 text-center transition cursor-pointer">
+                            <input type="file" id="custom-order-file" accept="image/*" class="hidden">
+                            <label for="custom-order-file" class="cursor-pointer block">
+                                <span class="text-3xl block mb-2">📸</span>
+                                <span class="text-xs font-bold text-stone-800 block">Click to upload or drag & drop an inspiration image</span>
+                                <span class="text-[11px] text-stone-400 block mt-1">PNG, JPG, WEBP up to 5MB</span>
+                            </label>
+                        </div>
+
+                        <div id="custom-preview-container" class="hidden mt-3 relative inline-block">
+                            <img id="custom-preview-img" src="" alt="Preview" class="w-44 h-44 object-cover rounded-2xl border-2 border-rose-200 shadow-md">
+                            <button type="button" id="remove-custom-img-btn" class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center shadow-lg hover:bg-rose-700">✕</button>
+                        </div>
+                    </div>
+
+                    <!-- Custom Instructions Description -->
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1.5">Describe What You Want Crocheted *</label>
+                        <textarea name="description" rows="4" required placeholder="Tell us sizes, expressions, preferred colors, or special requirements..." class="w-full px-4 py-3 rounded-2xl border border-stone-200 text-xs focus:ring-2 focus:ring-rose-400 leading-relaxed"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">Preferred Colors</label>
+                            <input type="text" name="color_preferences" placeholder="e.g. Baby Pink & Cream" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">Budget Range</label>
+                            <select name="budget_range" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs bg-white">
+                                <option value="Under Rs. 1,000">Under Rs. 1,000 (Keychains/Small)</option>
+                                <option value="Rs. 1,000 - Rs. 2,500" selected>Rs. 1,000 - Rs. 2,500 (Plushies)</option>
+                                <option value="Rs. 2,500 - Rs. 5,000">Rs. 2,500 - Rs. 5,000 (Bags/Bouquets)</option>
+                                <option value="Rs. 5,000+">Rs. 5,000+ (Wearables/Detailed Sets)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">Target Date Needed (Optional)</label>
+                            <input type="date" name="date_needed" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-xs">
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-900 text-xs flex items-center gap-2">
+                        <span>⏱️</span>
+                        <span>Please note: Custom bespoke creations require <strong>5 to 8 working days</strong> to craft with care.</span>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-sm shadow-xl shadow-rose-500/25 transition transform hover:-translate-y-0.5">
+                        ✨ Submit Custom Crochet Request
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- VIEW 4: ORDER TRACKING PAGE -->
+        <!-- ======================================================== -->
+        <section id="view-track" class="hidden max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in">
+            <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
+                <span class="text-3xl block">🔍</span>
+                <h2 class="text-3xl font-extrabold text-stone-900">Track Your Handmade Friend</h2>
+                <p class="text-stone-600 text-xs sm:text-sm">
+                    Enter your Order ID (e.g. <span class="font-mono font-bold text-rose-600">ORD-123456</span>) or Custom Request ID (<span class="font-mono font-bold text-amber-600">CUST-123456</span>).
+                </p>
+            </div>
+
+            <form id="tracking-form" class="max-w-md mx-auto mb-10 flex gap-2">
+                <input type="text" 
+                       id="tracking-input" 
+                       required 
+                       placeholder="Enter ORD-... or CUST-..." 
+                       class="flex-1 px-4 py-3 rounded-2xl border border-rose-200 bg-white text-xs font-mono font-bold uppercase focus:ring-2 focus:ring-rose-400 shadow-sm">
+                <button type="submit" class="px-6 py-3 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-md transition">
+                    Track
+                </button>
+            </form>
+
+            <div id="tracking-result-container" class="hidden animate-slide-up">
+                <!-- Rendered dynamically -->
+            </div>
+
+            <div id="tracking-not-found" class="hidden text-center py-12 bg-white rounded-3xl border border-rose-100 p-8 shadow-sm">
+                <span class="text-3xl block mb-2">🧶❓</span>
+                <h3 class="font-bold text-stone-800 text-sm">No order found with ID "<span id="not-found-id"></span>"</h3>
+                <p class="text-xs text-stone-500 mt-1 max-w-sm mx-auto">Please check your Order ID from your confirmation message or reach out via WhatsApp!</p>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- VIEW 5: ADMIN DASHBOARD (Supabase Auth) -->
+        <!-- ======================================================== -->
+        <section id="view-admin" class="hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fade-in">
+            <!-- Admin Header -->
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-rose-100 mb-6">
+                <div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <h2 class="text-2xl font-extrabold text-stone-900">Studio Management Hub</h2>
+                        <div id="admin-connection-status"></div>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-xs text-stone-500">Logged in as:</span>
+                        <span id="admin-current-email" class="text-xs font-bold text-rose-600 font-mono">admin@tinycrochet.com</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" id="admin-logout-btn" class="px-3.5 py-1.5 rounded-xl border border-stone-200 bg-white text-stone-700 hover:bg-rose-50 text-xs font-semibold transition flex items-center gap-1.5">
+                        <span>🚪</span> Log Out
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Navigation Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6">
+                <button type="button" class="admin-tab-btn active" data-tab="products">🧶 Products</button>
+                <button type="button" class="admin-tab-btn" data-tab="categories">📂 Categories</button>
+                <button type="button" class="admin-tab-btn" data-tab="orders">📦 Regular Orders</button>
+                <button type="button" class="admin-tab-btn" data-tab="custom">✨ Custom Requests</button>
+                <button type="button" class="admin-tab-btn" data-tab="settings">⚙️ Settings</button>
+            </div>
+
+            <!-- Panel 1: Products -->
+            <div id="admin-panel-products" class="space-y-4">
+                <div class="flex justify-between items-center bg-white p-4 rounded-2xl border border-stone-200 shadow-sm">
+                    <div>
+                        <span class="text-xs font-bold text-stone-700">Handmade Catalog Offerings</span>
+                        <p class="text-[11px] text-stone-400">All prices in Rs. • 5 to 8 working days lead time</p>
+                    </div>
+                    <button type="button" id="open-add-product-modal-btn" class="px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-sm transition">
+                        + Add New Product
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-x-auto shadow-sm">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-stone-50 text-[11px] font-bold text-stone-500 uppercase border-b border-stone-200">
+                                <th class="py-3 px-4">Photo</th>
+                                <th class="py-3 px-4">Product Name</th>
+                                <th class="py-3 px-4">Category</th>
+                                <th class="py-3 px-4">Price (Rs.)</th>
+                                <th class="py-3 px-4">Color Options</th>
+                                <th class="py-3 px-4">Visibility</th>
+                                <th class="py-3 px-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-products-table-body">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Panel 2: Categories -->
+            <div id="admin-panel-categories" class="hidden space-y-4">
+                <div class="flex justify-between items-center bg-white p-4 rounded-2xl border border-stone-200 shadow-sm">
+                    <div>
+                        <span class="text-xs font-bold text-stone-700">Shop Categories</span>
+                        <p class="text-[11px] text-stone-400">Organize your shop into Plushies, Keychains, Bags, Bouquets, etc.</p>
+                    </div>
+                    <button type="button" id="open-add-cat-modal-btn" class="px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-sm transition">
+                        + Add Category
+                    </button>
+                </div>
+
+                <div id="admin-categories-list" class="space-y-2">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Panel 3: Regular Orders -->
+            <div id="admin-panel-orders" class="hidden space-y-4">
+                <div id="admin-orders-list" class="space-y-3">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Panel 4: Custom Requests -->
+            <div id="admin-panel-custom" class="hidden space-y-4">
+                <div id="admin-custom-orders-list" class="space-y-3">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Panel 5: Settings -->
+            <div id="admin-panel-settings" class="hidden max-w-2xl bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-sm space-y-6">
+                <div>
+                    <h3 class="font-bold text-stone-900 text-lg">Supabase & WhatsApp Configuration</h3>
+                    <p class="text-xs text-stone-500 mt-1">
+                        Connect your live Supabase project! Get credentials in Supabase Dashboard: <em>Settings → API</em>.
+                    </p>
+                </div>
+
+                <form id="admin-settings-form" class="space-y-4 text-xs">
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Supabase Project URL</label>
+                        <input type="url" id="settings-supabase-url" name="supabase_url" placeholder="https://your-project-id.supabase.co" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 font-mono">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Supabase Anon Public API Key</label>
+                        <textarea id="settings-supabase-key" name="supabase_key" rows="3" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6..." class="w-full px-4 py-2.5 rounded-xl border border-stone-200 font-mono"></textarea>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">WhatsApp Business Number (e.g. 923001234567)</label>
+                        <input type="text" id="settings-whatsapp-number" name="whatsapp_number" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 font-mono">
+                    </div>
+                    <button type="submit" class="px-6 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-bold transition">
+                        Save & Reload Configuration
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-rose-100 py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="space-y-1">
+                <div class="flex items-center justify-center md:justify-start gap-2.5">
+                    <img src="assets/logo.png" alt="Tiny Crochet Friends" class="w-7 h-7 rounded-lg object-contain bg-white border border-rose-100 shadow-xs p-0.5">
+                    <span class="font-extrabold text-base text-stone-900">Tiny Crochet Friends</span>
+                </div>
+                <p class="text-xs text-stone-500">Handmade crochet cuties, stitched with love. Made-to-order in 5 to 8 working days.</p>
+            </div>
+
+            <!-- Instagram Badge in Footer -->
+
+             <div>
+                <a href="https://www.instagram.com/tiny.crochetfriends?stkn=cjZxODZleGNzZTVv" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-pink-50 hover:bg-pink-100 border border-pink-200 text-pink-700 text-xs font-bold transition shadow-sm">
+                    <svg class="w-4 h-4 fill-current text-pink-600" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span>Follow @tiny.crochetfriends</span>
+                </a>
+
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-pink-50 border border-pink-200 text-xs font-bold text-pink-700 shadow-sm">
+                    <span>✉️</span>
+                    <span class="text-stone-700 font-semibold">For help contact us on <strong class="text-rose-700 font-bold">tiny.crochetfriendzz@gmail.com</strong></span>
+                </div>
+                 
+            </div>
+
+            <div class="flex items-center gap-6 text-xs font-semibold text-stone-600">
+                <a href="#home" class="hover:text-rose-600">Home</a>
+                <a href="#shop" class="hover:text-rose-600">Shop</a>
+                <a href="#custom" class="hover:text-rose-600">Custom Order</a>
+                <a href="#track" class="hover:text-rose-600">Track Order</a>
+                <a href="#admin" class="hover:text-rose-600 text-stone-400">Admin 🔒</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================================================== -->
+    <!-- FLOATING WHATSAPP BUTTON & POPUP -->
+    <!-- ======================================================== -->
+    <div class="whatsapp-float-wrapper">
+        <button id="whatsapp-floating-btn" type="button" class="whatsapp-float whatsapp-pulse w-14 h-14 rounded-full flex items-center justify-center text-3xl cursor-pointer" title="Chat with Tiny Crochet Friends on WhatsApp">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.071.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.57 4.184 1.571 5.938l-1.667 6.09 6.273-1.645c1.704.945 3.666 1.488 5.76 1.488 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+            </svg>
+        </button>
+
+        <!-- WhatsApp Quick Chat Popover -->
+        <!-- WhatsApp Quick Chat Popover -->
+        <div id="whatsapp-popup-menu" class="hidden fixed bottom-28 right-7 z-50 w-72 bg-white rounded-3xl p-5 border border-emerald-100 shadow-2xl stitch-border text-xs space-y-3 animate-slide-up">
+            <div class="flex items-center justify-between border-b border-stone-100 pb-2">
+                <div class="flex items-center gap-2">
+                    <img src="assets/logo.png" alt="Tiny Crochet Friends" class="w-6 h-6 rounded-full object-contain border border-emerald-200 bg-white">
+                    <span class="font-bold text-stone-800">Tiny Crochet Friends</span>
+                </div>
+                <button type="button" id="close-wa-popup-btn" class="text-stone-400 hover:text-stone-700">✕</button>
+            </div>
+            <p class="text-stone-500 leading-relaxed">
+                Hi! Need help with colors or want to check an order? Choose an option:
+            </p>
+            <div class="space-y-2">
+                <a id="wa-option-general" href="#" target="_blank" class="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50 hover:bg-emerald-50 border border-stone-100 text-stone-700 transition">
+                    <span>💬</span> <span>General Question / Sizing</span>
+                </a>
+                <a id="wa-option-custom" href="#" target="_blank" class="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50 hover:bg-emerald-50 border border-stone-100 text-stone-700 transition">
+                    <span>✨</span> <span>Discuss Custom Order</span>
+                </a>
+                <a id="wa-option-track" href="#" target="_blank" class="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50 hover:bg-emerald-50 border border-stone-100 text-stone-700 transition">
+                    <span>📦</span> <span>Check Order Status</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: PRODUCT DETAIL & COLOR CHOOSER -->
+    <!-- ======================================================== -->
+    <div id="product-detail-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div id="product-detail-backdrop" class="modal-backdrop fixed inset-0"></div>
+        <div class="relative z-10 w-full max-w-2xl bg-white rounded-3xl overflow-hidden shadow-2xl border border-rose-100 max-h-[90vh] flex flex-col md:flex-row animate-slide-up">
+            <button type="button" id="close-product-modal-btn-top" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-stone-100 hover:bg-rose-100 text-stone-600 hover:text-rose-600 flex items-center justify-center text-sm font-bold transition">
+                ✕
+            </button>
+
+            <!-- Product Gallery & Main Image -->
+            <div class="w-full md:w-1/2 bg-rose-50/40 p-4 sm:p-5 flex flex-col justify-between flex-shrink-0 border-b md:border-b-0 md:border-r border-rose-100">
+                <!-- Large Main Image Viewer -->
+                <div class="relative aspect-square w-full rounded-2xl overflow-hidden bg-white border border-rose-100 shadow-sm flex items-center justify-center">
+                    <img id="modal-product-img" src="" alt="Crochet Product" class="w-full h-full object-cover transition-all duration-300">
+                    <div class="absolute bottom-3 left-3">
+                        <span id="modal-product-craft-days" class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[10px] font-bold text-stone-700 shadow-sm">
+                            ⏱️ 5 to 8 working days
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Clickable Thumbnails Row -->
+                <div id="modal-gallery-wrapper" class="mt-3">
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-stone-400 mb-1.5 flex items-center justify-between">
+                        <span>📸 Product Views:</span>
+                        <span id="modal-gallery-count" class="text-rose-500 font-semibold">1 view</span>
+                    </p>
+                    <div id="modal-gallery-thumbnails" class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+                        <!-- Thumbnails injected dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 flex-1 flex flex-col justify-between overflow-y-auto">
+                <div class="space-y-3">
+                    <span id="modal-product-category" class="text-xs font-bold text-rose-500 uppercase tracking-wider">Category</span>
+                    <h3 id="modal-product-name" class="text-xl font-extrabold text-stone-900 leading-snug">Product Name</h3>
+                    <p id="modal-product-price" class="text-2xl font-black text-rose-600">Rs. 0</p>
+                    <p id="modal-product-description" class="text-xs text-stone-600 leading-relaxed">Description goes here.</p>
+
+                    <div class="p-3 rounded-2xl bg-stone-50 border border-stone-100 text-[11px] space-y-1 text-stone-600">
+                        <p><strong>🧶 Materials:</strong> <span id="modal-product-materials"></span></p>
+                        <p><strong>📐 Size / Dimensions:</strong> <span id="modal-product-dimensions"></span></p>
+                        <p><strong>⏱️ Making Time:</strong> 5 to 8 working days (Handmade)</p>
+                    </div>
+
+                    <div class="pt-2">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-stone-700">Choose Yarn Color:</span>
+                            <span id="modal-selected-color-name" class="text-xs font-semibold text-rose-600"></span>
+                        </div>
+                        <div id="modal-color-swatches" class="flex items-center gap-2 flex-wrap">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-stone-100 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center border border-stone-200 rounded-xl bg-stone-50 overflow-hidden text-xs">
+                            <button type="button" id="modal-qty-minus" class="px-3 py-2 hover:bg-stone-200 text-stone-600">-</button>
+                            <input type="text" id="modal-qty-input" value="1" readonly class="w-9 text-center bg-transparent font-bold text-stone-800">
+                            <button type="button" id="modal-qty-plus" class="px-3 py-2 hover:bg-stone-200 text-stone-600">+</button>
+                        </div>
+                        <button type="button" id="modal-add-to-cart-btn" class="flex-1 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-md transition">
+                            Add to Bag 🛍️
+                        </button>
+                    </div>
+
+                    <a id="modal-whatsapp-inquiry-btn" href="#" target="_blank" class="w-full py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold text-xs flex items-center justify-center gap-2 transition">
+                        <span>💬 Ask about custom colors or sizes on WhatsApp </span>
+                    </a>
+                    <!-- Reviews & Testimonials Section inside Product Modal -->
+                <div class="mt-6 pt-6 border-t border-stone-100 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-stone-900 text-sm flex items-center gap-1.5">
+                            <span>⭐</span> Customer Reviews (<span id="modal-review-count">0</span>)
+                        </h4>
+                        <div class="text-xs font-bold text-amber-500" id="modal-avg-rating">★ 5.0 / 5.0</div>
+                    </div>
+
+                    <!-- Existing Reviews List Container -->
+                    <div id="modal-reviews-list" class="space-y-2 max-h-40 overflow-y-auto pr-1">
+                        <!-- Dynamically populated reviews -->
+                    </div>
+
+                    <!-- Write a Review Form -->
+                    <form id="product-review-form" class="p-3.5 bg-rose-50/50 rounded-2xl border border-rose-100 space-y-2.5 text-xs">
+                        <p class="font-bold text-stone-800">Leave a review for this cutie 🧶</p>
+                        <div class="grid grid-cols-2 gap-2">
+                            <input type="text" name="customer_name" required placeholder="Your Name" class="px-3 py-2 rounded-xl border border-stone-200 bg-white">
+                            <select name="rating" required class="px-3 py-2 rounded-xl border border-stone-200 bg-white">
+                                <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
+                                <option value="4">⭐⭐⭐⭐ (4/5 Very Good)</option>
+                                <option value="3">⭐⭐⭐ (3/5 Good)</option>
+                                <option value="2">⭐⭐ (2/5 Fair)</option>
+                                <option value="1">⭐ (1/5 Poor)</option>
+                            </select>
+                        </div>
+                        <textarea name="comment" rows="2" required placeholder="Share your experience about the softness and quality..." class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-white"></textarea>
+                        <button type="submit" class="w-full py-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold transition">
+                            Submit Review 🌸
+                        </button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- CART DRAWER -->
+    <!-- ======================================================== -->
+    <div id="cart-backdrop" class="hidden fixed inset-0 z-50 modal-backdrop"></div>
+    <div id="cart-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="p-5 border-b border-rose-100 flex items-center justify-between bg-rose-50/50">
+            <div class="flex items-center gap-2">
+                <span class="text-xl">🛍️</span>
+                <h3 class="font-bold text-stone-900 text-base">Your Crochet Bag</h3>
+            </div>
+            <button type="button" id="close-cart-btn" class="p-1 rounded-lg text-stone-400 hover:text-stone-700 text-sm">✕</button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-4 space-y-3">
+            <div id="cart-items-list" class="space-y-2.5">
+                <!-- Rendered dynamically -->
+            </div>
+
+            <div id="cart-empty-state" class="text-center py-16 space-y-3">
+                <span class="text-4xl block">🧺</span>
+                <p class="font-bold text-stone-700 text-sm">Your bag is empty</p>
+                <p class="text-stone-400 text-xs">Fill it with handmade crochet cuties!</p>
+                <a href="#shop" onclick="document.getElementById('cart-backdrop').click()" class="inline-block mt-2 px-5 py-2 rounded-full bg-rose-100 text-rose-800 font-bold text-xs">
+                    Start Shopping
+                </a>
+            </div>
+        </div>
+
+        <div id="cart-checkout-footer" class="p-5 border-t border-rose-100 bg-stone-50 space-y-3">
+            <div class="space-y-1.5 text-xs text-stone-600">
+                <div class="flex justify-between">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal" class="font-bold text-stone-800">Rs. 0</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Shipping</span>
+                    <span id="cart-shipping">Rs. 250</span>
+                </div>
+                <div class="flex justify-between pt-2 border-t border-stone-200 text-sm font-black text-stone-900">
+                    <span>Estimated Total</span>
+                    <span id="cart-total" class="text-rose-600">Rs. 0</span>
+                </div>
+            </div>
+
+            <button type="button" id="proceed-checkout-btn" class="w-full py-3.5 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition">
+                Proceed to Checkout →
+            </button>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: CHECKOUT -->
+    <!-- ======================================================== -->
+    <div id="checkout-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop fixed inset-0" onclick="document.getElementById('close-checkout-modal-btn').click()"></div>
+        <div class="relative z-10 w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-rose-100 max-h-[90vh] overflow-y-auto animate-slide-up">
+            <div class="flex items-center justify-between pb-4 border-b border-rose-100 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">📝</span>
+                    <h3 class="font-extrabold text-stone-900 text-lg">Checkout Order</h3>
+                </div>
+                <button type="button" id="close-checkout-modal-btn" class="text-stone-400 hover:text-stone-700 text-sm">✕</button>
+            </div>
+
+            <div class="mb-4 bg-rose-50/50 p-3.5 rounded-2xl border border-rose-100">
+                <p class="text-xs font-bold text-stone-700 mb-2">Order Items:</p>
+                <div id="checkout-summary-items" class="space-y-1">
+                    <!-- Populated dynamically -->
+                </div>
+                <div class="flex justify-between items-center pt-2 mt-2 border-t border-rose-200/50 text-xs font-bold">
+                    <span>Total Amount:</span>
+                    <span id="checkout-final-total" class="text-rose-600 text-sm"></span>
+                </div>
+            </div>
+
+            <div class="mb-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-center gap-2">
+                <span>⏱️</span>
+                <span><strong>Handmade Lead Time:</strong> Your order will be made and dispatched in <strong>5 to 8 working days</strong>.</span>
+            </div>
+
+            <form id="checkout-form" class="space-y-3.5 text-xs">
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Your Full Name *</label>
+                    <input type="text" name="customer_name" required placeholder="Fatima Ali" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">WhatsApp / Phone *</label>
+                        <input type="tel" name="customer_phone" required placeholder="0300 1234567" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Email Address</label>
+                        <input type="email" name="customer_email" placeholder="fatima@example.com" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Delivery Address *</label>
+                    <input type="text" name="shipping_address" required placeholder="House #, Street, Area" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">City *</label>
+                        <input type="text" name="city" required placeholder="Karachi / Lahore / Islamabad..." class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Postal Code (Optional)</label>
+                        <input type="text" name="postal_code" placeholder="75500" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Gift Note / Custom Instructions</label>
+                    <textarea name="notes" rows="2" placeholder="Any special color requests or gift messages..." class="w-full px-3.5 py-2 rounded-xl border border-stone-200"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3.5 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition">
+                        Place Made-to-Order ✨
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: ORDER SUCCESS -->
+    <!-- ======================================================== -->
+    <div id="order-success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop fixed inset-0"></div>
+        <div class="relative z-10 w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 text-center space-y-4 shadow-2xl border border-rose-100 animate-slide-up">
+            <span class="text-5xl block animate-bounce">🎉🧶</span>
+            <h3 class="font-extrabold text-xl text-stone-900">Your Order Has Been Placed!</h3>
+            <p class="text-xs text-stone-500">
+                Thank you for supporting <strong>Tiny Crochet Friends</strong>! Here is your Order ID:
+            </p>
+            <div class="p-3 bg-rose-50 rounded-2xl border border-rose-200 font-mono font-black text-rose-700 text-lg tracking-wider" id="success-order-id">
+                ORD-000000
+            </div>
+            
+            <div id="success-order-details" class="text-left"></div>
+
+            <div class="space-y-2 pt-2">
+                <a id="success-whatsapp-btn" href="#" target="_blank" class="w-full py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition">
+                    <span>💬 Confirm Order on WhatsApp</span>
+                </a>
+                <button type="button" onclick="document.getElementById('order-success-modal').classList.add('hidden')" class="w-full py-2.5 rounded-xl border border-stone-200 text-stone-600 text-xs font-semibold hover:bg-stone-50">
+                    Back to Shop
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: CUSTOM ORDER SUCCESS -->
+    <!-- ======================================================== -->
+    <div id="custom-order-success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop fixed inset-0"></div>
+        <div class="relative z-10 w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 text-center space-y-4 shadow-2xl border border-amber-100 animate-slide-up">
+            <span class="text-5xl block">✨🎨</span>
+            <h3 class="font-extrabold text-xl text-stone-900">Custom Request Received!</h3>
+            <p class="text-xs text-stone-500">
+                We've received your inspiration details. Save your reference ID:
+            </p>
+            <div class="p-3 bg-amber-50 rounded-2xl border border-amber-200 font-mono font-black text-amber-800 text-lg tracking-wider" id="custom-success-id">
+                CUST-000000
+            </div>
+            
+            <div id="custom-success-details" class="text-left"></div>
+
+            <div class="space-y-2 pt-2">
+                <a id="custom-success-whatsapp-btn" href="#" target="_blank" class="w-full py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition">
+                    <span>💬 Discuss Details on WhatsApp</span>
+                </a>
+                <button type="button" onclick="document.getElementById('custom-order-success-modal').classList.add('hidden')" class="w-full py-2.5 rounded-xl border border-stone-200 text-stone-600 text-xs font-semibold hover:bg-stone-50">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: ADMIN SUPABASE AUTH LOGIN -->
+    <!-- ======================================================== -->
+    <div id="admin-auth-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop fixed inset-0" onclick="document.getElementById('admin-auth-modal').classList.add('hidden')"></div>
+        <div class="relative z-10 w-full max-w-sm bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-stone-200 text-center space-y-4 animate-slide-up">
+            <div class="w-12 h-12 mx-auto rounded-2xl bg-rose-100 flex items-center justify-center text-2xl">
+                🔒
+            </div>
+            <div>
+                <h3 class="font-extrabold text-stone-900 text-lg">Studio Admin Login</h3>
+                <p class="text-stone-500 text-xs mt-1">Authenticate using your Supabase Admin email and password.</p>
+            </div>
+
+            <form id="admin-login-form" class="space-y-3 text-left text-xs">
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Admin Email</label>
+                    <input type="email" id="admin-email-input" name="email" required placeholder="admin@tinycrochet.com" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:ring-2 focus:ring-rose-400">
+                </div>
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Password</label>
+                    <input type="password" id="admin-password-input" name="password" required placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:ring-2 focus:ring-rose-400">
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-xs transition">
+                        Sign In to Studio Dashboard 🔑
+                    </button>
+                </div>
+                <p class="text-[11px] text-stone-400 text-center pt-1">
+                    Tip: Create your admin account in <em>Supabase > Authentication > Users</em>.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: ADD / EDIT PRODUCT -->
+    <!-- ======================================================== -->
+    <div id="admin-product-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop fixed inset-0" onclick="document.getElementById('close-product-modal-btn').click()"></div>
+        <div class="relative z-10 w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-stone-200 max-h-[90vh] overflow-y-auto animate-slide-up text-xs">
+            <div class="flex items-center justify-between pb-3 border-b border-stone-100 mb-4">
+                <h3 id="admin-product-modal-title" class="font-bold text-stone-900 text-base">Add New Crochet Creation</h3>
+                <button type="button" id="close-product-modal-btn" class="text-stone-400 hover:text-stone-700">✕</button>
+            </div>
+
+            <form id="admin-product-form" class="space-y-3.5">
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Product Title *</label>
+                    <input type="text" name="name" required placeholder="e.g. Strawberry Milk Cow Calf" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Category *</label>
+                        <select name="category_id" required class="w-full px-3.5 py-2 rounded-xl border border-stone-200 bg-white">
+                            <!-- Populated from database -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Price (Rs.) *</label>
+                        <input type="number" step="10" name="price" required placeholder="1250" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Craft Days (5 to 8 days)</label>
+                        <input type="number" name="craft_days" value="7" required class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Dimensions / Sizing</label>
+                        <input type="text" name="dimensions" placeholder="e.g. 15cm x 10cm" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                    </div>
+                </div>
+
+                <!-- Main Cover Photo -->
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Main Cover Photo * (Upload or Image URL)</label>
+                    <input type="file" id="admin-product-image-file" accept="image/*" class="w-full mb-1 text-[11px] text-stone-500">
+                    <input type="url" name="image_url" placeholder="Or paste main image URL" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                    <img id="admin-product-preview-img" src="" alt="Preview" class="hidden mt-2 w-20 h-20 object-cover rounded-xl border">
+                </div>
+
+                <!-- Secondary Gallery Photos -->
+                <div class="p-3.5 rounded-2xl bg-stone-50 border border-stone-200/80 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="block font-bold text-stone-700 text-xs">📸 Additional Gallery Images (Angles & Close-ups)</label>
+                        <span class="text-[10px] text-stone-400">Multiple files supported</span>
+                    </div>
+                    <input type="file" id="admin-product-gallery-files" accept="image/*" multiple class="w-full text-[11px] text-stone-500">
+                    <div class="flex gap-2">
+                        <input type="url" id="admin-product-gallery-url-input" placeholder="Or paste secondary image URL..." class="flex-1 px-3 py-1.5 rounded-xl border border-stone-200 text-xs">
+                        <button type="button" id="admin-add-gallery-url-btn" class="px-3 py-1.5 rounded-xl bg-stone-200 hover:bg-stone-300 font-bold text-stone-700 text-xs transition">
+                            + Add URL
+                        </button>
+                    </div>
+
+                    <!-- Gallery Previews List -->
+                    <div id="admin-gallery-previews" class="flex items-center gap-2 flex-wrap pt-1 min-h-[30px]">
+                        <!-- Thumbnail badges with remove button -->
+                    </div>
+                </div>
+
+                <!-- Color Swatches Input -->
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Color Options (Format: Name:#hex, Name:#hex)</label>
+                    <input type="text" name="color_options" placeholder="Baby Pink:#F4A6B8, Sage Green:#9BB0A5, Cream:#FDF6E2" class="w-full px-3.5 py-2 rounded-xl border border-stone-200 font-mono text-[11px]">
+                    <span class="text-[10px] text-stone-400 block mt-0.5">Example: Pastel Pink:#F4A6B8, Mint Green:#A8D5BA, Buttercream:#FFF2B2</span>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Description *</label>
+                    <textarea name="description" rows="3" required placeholder="Describe the materials, softness, and cute details..." class="w-full px-3.5 py-2 rounded-xl border border-stone-200"></textarea>
+                </div>
+
+                <div class="space-y-2 pt-1">
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" name="is_active" id="chk-is-active" class="rounded text-emerald-600" checked>
+                        <label for="chk-is-active" class="font-bold text-stone-700">Active & Visible in Shop Catalog</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" name="is_featured" id="chk-featured" class="rounded text-rose-500">
+                        <label for="chk-featured" class="font-bold text-stone-700">Display in Featured Collection on Home page</label>
+                    </div>
+                </div>
+
+                <div class="pt-3">
+                    <button type="submit" class="w-full py-3 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold transition">
+                        Save Creation 🧶
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: ADD CATEGORY -->
+    <!-- ======================================================== -->
+    <div id="admin-cat-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop fixed inset-0" onclick="document.getElementById('admin-cat-modal').classList.add('hidden')"></div>
+        <div class="relative z-10 w-full max-w-sm bg-white rounded-3xl p-6 shadow-2xl border border-stone-200 animate-slide-up text-xs">
+            <div class="flex items-center justify-between pb-3 border-b border-stone-100 mb-3">
+                <h3 class="font-bold text-stone-900 text-sm">Add New Category</h3>
+                <button type="button" onclick="document.getElementById('admin-cat-modal').classList.add('hidden')" class="text-stone-400 hover:text-stone-700">✕</button>
+            </div>
+
+            <form id="admin-cat-form" class="space-y-3">
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Category Name *</label>
+                    <input type="text" name="name" required placeholder="e.g. Plushies, Keychains, Bags" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Icon Emoji</label>
+                        <input type="text" name="icon" value="🧸" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-stone-700 mb-1">Display Order</label>
+                        <input type="number" name="display_order" value="1" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-bold text-stone-700 mb-1">Short Description</label>
+                    <input type="text" name="description" placeholder="e.g. Squishy handmade amigurumi" class="w-full px-3.5 py-2 rounded-xl border border-stone-200">
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold transition">
+                        Add Category ✨
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container"></div>
+
+    <!-- App Scripts (ES Modules) -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

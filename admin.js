@@ -225,14 +225,14 @@ async function renderAdminProducts() {
     const container = document.getElementById('admin-products-table-body');
     if (!container) return;
 
-    container.innerHTML = `<tr><td colspan="7" class="text-center py-8 text-stone-400">Loading your creations... 🧶</td></tr>`;
+    container.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-stone-400">Loading your creations... 🧶</td></tr>`;
 
     try {
         const products = await db.getProducts();
         if (products.length === 0) {
             container.innerHTML = `
                 <tr>
-                    <td colspan="7" class="text-center py-12 text-stone-500">
+                    <td colspan="6" class="text-center py-12 text-stone-500">
                         <span class="text-3xl block mb-2">🌸</span>
                         <p class="font-bold text-stone-700">Clean Slate: No products created yet</p>
                         <p class="text-xs text-stone-400 mt-1">Click <strong>"+ Add New Product"</strong> above to add your first handmade creation!</p>

@@ -411,11 +411,7 @@ async function openProductModal(product = null) {
                 form.elements['is_active'].checked = product.is_active !== false;
             }
 
-            const colorStr = (product.color_options || [])
-                .map(c => `${c.name}:${c.hex}`)
-                .join(', ');
-            form.elements['color_options'].value = colorStr;
-
+            
             const preview = document.getElementById('admin-product-preview-img');
             if (preview) {
                 preview.src = product.image_url;
@@ -423,7 +419,6 @@ async function openProductModal(product = null) {
             }
         } else {
             form.elements['craft_days'].value = CONFIG.STANDARD_CRAFT_DAYS;
-            form.elements['color_options'].value = 'Pastel Pink:#F4A6B8, Sage Green:#9BB0A5, Cream:#FDF6E2, Soft Lilac:#C9B6E4';
             if (form.elements['is_active']) {
                 form.elements['is_active'].checked = true;
             }

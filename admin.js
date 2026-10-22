@@ -260,9 +260,7 @@ async function renderAdminProducts() {
                     </td>
                     <td class="py-3 px-4 text-stone-600">${product.categories?.name || 'Unassigned'}</td>
                     <td class="py-3 px-4 font-bold text-rose-600">${CONFIG.CURRENCY} ${parseFloat(product.price).toLocaleString()}</td>
-                    <td class="py-3 px-4">
-                        <div class="flex items-center gap-1.5 flex-wrap max-w-[140px]">${swatches || '<span class="text-stone-400">Standard</span>'}</div>
-                    </td>
+                    
                     <td class="py-3 px-4">
                         <button type="button" 
                                 class="px-2.5 py-1 rounded-full text-[11px] font-bold transition flex items-center gap-1.5 shadow-sm ${isVisible ? 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200 border border-emerald-300' : 'bg-stone-200 text-stone-600 hover:bg-stone-300 border border-stone-300'}"

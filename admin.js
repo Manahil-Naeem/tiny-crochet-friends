@@ -472,15 +472,8 @@ async function handleSaveProduct(e) {
             editingGalleryImages = [...persistentUrls, ...uploadedGalleryUrls];
         }
 
-        const colorsRaw = formData.get('color_options')?.trim() || '';
-        const colorOptions = colorsRaw.split(',').map(part => {
-            const [name, hex] = part.split(':').map(s => s?.trim());
-            return {
-                name: name || 'Custom',
-                hex: hex && hex.startsWith('#') ? hex : '#E0839B'
-            };
-        }).filter(c => c.name);
-
+        const yarnUsed = formData.get('yarn_used')?.trim() || 'Standard Yarn';
+        
         const payload = {
             name: formData.get('name'),
             slug: formData.get('name').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
@@ -491,7 +484,7 @@ async function handleSaveProduct(e) {
             dimensions: formData.get('dimensions') || '',
             image_url: finalImageUrl || 'assets/favicon.svg',
             gallery_images: editingGalleryImages,
-            color_options: colorOptions,
+            yarn_used: yarnUsed,
             is_featured: form.elements['is_featured'] ? form.elements['is_featured'].checked : false,
             is_active: form.elements['is_active'] ? form.elements['is_active'].checked : true
         };

@@ -293,25 +293,12 @@ function renderProductCard(product) {
                 </div>
 
                 <div class="mt-3 pt-3 border-t border-stone-100">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Yarn Color:</span>
-                        <span class="selected-color-label text-[11px] font-semibold text-stone-700 truncate max-w-[120px]">${initialColor.name}</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 flex-wrap">
-                        ${colors.map((c, idx) => `
-                            <button type="button" 
-                                    class="color-swatch-btn product-card-swatch w-5 h-5 rounded-full flex-shrink-0 ${idx === 0 ? 'active' : ''}" 
-                                    style="background-color: ${c.hex};" 
-                                    title="${c.name}"
-                                    data-product-id="${product.id}"
-                                    data-color-index="${idx}"
-                                    data-color-name="${c.name}"
-                                    data-color-hex="${c.hex}">
-                            </button>
-                        `).join('')}
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-rose-50/60 border border-rose-100 text-[11px] text-stone-600">
+                        <span>🧶</span>
+                        <span><strong>Yarn Used:</strong> As per design selection</span>
                     </div>
                 </div>
-
+                
                 <div class="flex items-center justify-between mt-4 pt-2">
                     <span class="font-extrabold text-sm sm:text-base text-stone-900">${CONFIG.CURRENCY} ${parseFloat(product.price).toLocaleString()}</span>
                     <button type="button" 

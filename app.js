@@ -295,7 +295,7 @@ function renderProductCard(product) {
                 <div class="mt-3 pt-3 border-t border-stone-100">
                     <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-rose-50/60 border border-rose-100 text-[11px] text-stone-600">
                         <span>🧶</span>
-                        <span><strong>Yarn Used:</strong> As per design selection</span>
+                        <span class="truncate"><strong>Yarn Used:</strong> ${product.yarn_used || 'Milk Cotton Yarn'}</span>
                     </div>
                 </div>
                 
@@ -376,6 +376,12 @@ export function openProductDetailModal(product) {
     document.getElementById('modal-product-craft-days').textContent = `⏱️ Lead time: ${CONFIG.STANDARD_LEAD_TIME} (Made-to-order)`;
     document.getElementById('modal-product-materials').textContent = product.materials || '100% Premium Milk Cotton Yarn & Hypoallergenic Fiberfill';
     document.getElementById('modal-product-dimensions').textContent = product.dimensions || 'Handcrafted size';
+
+    // 👇 YAHAN YEH LINE ADD KAREIN MODAL KE LIYE:
+    const yarnTextEl = document.getElementById('modal-yarn-used-text');
+    if (yarnTextEl) {
+        yarnTextEl.textContent = product.yarn_used || 'Custom made using premium milk cotton yarn colors.';
+    }
     document.getElementById('modal-qty-input').value = '1';
 
     renderModalSwatches(product);

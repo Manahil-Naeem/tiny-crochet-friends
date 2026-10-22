@@ -406,6 +406,7 @@ async function openProductModal(product = null) {
             form.elements['image_url'].value = product.image_url || '';
             form.elements['description'].value = product.description || '';
             form.elements['dimensions'].value = product.dimensions || '';
+            form.elements['yarn_used'].value = product.yarn_used || '';
             form.elements['is_featured'].checked = !!product.is_featured;
             if (form.elements['is_active']) {
                 form.elements['is_active'].checked = product.is_active !== false;
@@ -419,6 +420,7 @@ async function openProductModal(product = null) {
             }
         } else {
             form.elements['craft_days'].value = CONFIG.STANDARD_CRAFT_DAYS;
+            form.elements['yarn_used'].value = 'Milk Cotton Yarn';
             if (form.elements['is_active']) {
                 form.elements['is_active'].checked = true;
             }

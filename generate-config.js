@@ -1,8 +1,8 @@
 const fs = require('fs');
 
 const configContent = `export const CONFIG = {
-  SUPABASE_URL: "${process.env.SUPABASE_URL || ''}",
-  SUPABASE_ANON_KEY: "${process.env.SUPABASE_ANON_KEY || ''}",
+  SUPABASE_URL: localStorage.getItem('SUPABASE_URL') || "${process.env.SUPABASE_URL || ''}",
+  SUPABASE_ANON_KEY: localStorage.getItem('SUPABASE_ANON_KEY') || "${process.env.SUPABASE_ANON_KEY || ''}",
   STORE_NAME: "${process.env.STORE_NAME || 'Tiny Crochet Friends'}",
   TAGLINE: "${process.env.TAGLINE || 'Handmade Crochet Cuties, Stitched with Love 🧶'}",
   SUPPORT_EMAIL: "${process.env.SUPPORT_EMAIL || 'tiny.crochetfriendzz@gmail.com'}",
@@ -19,7 +19,14 @@ const configContent = `export const CONFIG = {
     CUSTOM_ORDERS: "${process.env.BUCKET_CUSTOM_ORDERS || 'custom-orders'}",
     PRODUCT_IMAGES: "${process.env.BUCKET_PRODUCT_IMAGES || 'product-images'}"
   }
-};`;
+};
+
+export function updateCredentials(url, key) {
+  if (url) localStorage.setItem('SUPABASE_URL', url);
+  if (key) localStorage.setItem('SUPABASE_ANON_KEY', key);
+  console.log('Credentials updated successfully');
+}
+`;
 
 fs.writeFileSync('./config.js', configContent);
-console.log('config.js generated successfully from environment variables!');
+console.log('config.js generated successfully with CONFIG and updateCredentials!');
